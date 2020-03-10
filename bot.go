@@ -23,7 +23,7 @@ func main() {
 
 	b.Handle("/start", func(m *tb.Message) {
 		b.Send(m.Sender, "Hello!\nThe possible / commands are:\n1. hello (greets the user)\n2. time (tells the UTC time)")
-		fmt.Println("Got a valid request for /hello")
+		fmt.Println("Got a valid request for /start")
 		fmt.Printf("Sender's ID: %d", m.Sender.ID)
 		fmt.Println("\n")
 	})
